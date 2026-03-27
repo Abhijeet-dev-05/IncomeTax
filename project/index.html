@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tax Boss Fight</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="boss-fight-container" id="bg-container">
+
+        <div class="tax-card">
+            <!-- The Gamified Header -->
+            <div class="boss-health">
+                <p>FM Happiness & Tax Focus Target</p>
+                <div class="health-bar">
+                    <div class="fill" id="boss-hp"></div>
+                </div>
+            </div>
+
+            <div class="avatar-container">
+                <img src="nirmala.avif" alt="The Tax Boss" id="boss-avatar">
+            </div>
+
+            <h1 class="boss-name">Nirmala The Collector</h1>
+            <p class="boss-quote" id="boss-quote">"Move the slider. Show me what you got."</p>
+
+            <div class="income-slider-group">
+                <label>Declare Your Income (₹)</label>
+                <!-- Text + Range synced controls -->
+                <div class="input-wrapper">
+                    <span>₹</span>
+                    <input type="number" id="income-num" value="500000" min="0">
+                </div>
+                <input type="range" id="income-slider" min="0" max="3000000" step="50000" value="500000">
+            </div>
+
+            <button id="calc-btn" class="pay-btn">Surrender Wealth</button>
+        </div>
+
+        <!-- The Animated Grocery Receipt Result -->
+        <div class="receipt-overlay" id="receipt-overlay">
+            <div class="receipt">
+                <div class="receipt-header">
+                    <h2>MINISTRY OF TEARS</h2>
+                    <p>Sub-division: Middle Class</p>
+                    <p>-------------------------</p>
+                </div>
+                <div class="receipt-body" id="receipt-content">
+                    <!-- Javascript generates printing items here -->
+                </div>
+                <div class="receipt-footer">
+                    <p>-------------------------</p>
+                    <h3 id="final-verdict"></h3>
+                    <img src="" id="receipt-meme" class="receipt-meme">
+                </div>
+                <button id="close-receipt" class="run-away-btn">Cry & Refresh</button>
+            </div>
+        </div>
+    </div>
+    <script src="first.js"></script>
+</body>
+
+</html>
